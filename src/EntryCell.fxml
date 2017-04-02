@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+-->
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<fx:root maxHeight="100.0" maxWidth="1.7976931348623157E308" minHeight="62.0" minWidth="400.0" onMouseEntered="#showActionButtons" onMouseExited="#hideActionButtons" prefWidth="540.0" type="HBox" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EntryCell">
+<children>
+   <JFXButton fx:id="moodIconButton" alignment="CENTER" contentDisplay="CENTER" ellipsisString="." focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#editMoodState" prefHeight="52.0" prefWidth="52.0" text="MOOD" textAlignment="CENTER" textFill="#ff6a00" wrapText="true">
+      <font>
+         <Font size="9.0" />
+      </font>
+   </JFXButton>
+   <VBox HBox.hgrow="ALWAYS">
+      <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <JFXTimePicker fx:id="timePicker" defaultColor="#3498db" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#editTime" prefWidth="90.0" promptText="10:00 AM" />
+                  <Separator orientation="VERTICAL" />
+                  <Label fx:id="dayOfWeekLabel" text="MONDAY" />
+                  <JFXDatePicker fx:id="datePicker" defaultColor="#2ecc71" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#editDate" prefWidth="95.0" promptText="01.01.2017" />
+               </children>
+            </HBox>
+            <JFXTextField fx:id="activitiesTextfield" focusTraversable="false" layoutX="15.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="325.0" onAction="#editActivities" onMouseClicked="#clickActivitiesField" prefHeight="25.0" prefWidth="480.0" text="School, Reading, Exercise, Travel, Friends, Reading, Reading, Reading, Reading, Reading" unFocusColor="#4d4d4d00" visible="false">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></JFXTextField>
+      </children>
+         <HBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </HBox.margin>
+   </VBox>
+      <VBox alignment="TOP_RIGHT">
+         <children>
+            <JFXButton fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" disable="true" ellipsisString="." focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteEntry" prefHeight="52.0" prefWidth="25.0" ripplerFill="RED" text="D" textFill="RED" visible="false">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </VBox>
+</children>
+<VBox.margin>
+   <Insets />
+</VBox.margin>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</fx:root>

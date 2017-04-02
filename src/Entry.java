@@ -1,4 +1,5 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 /**
@@ -6,15 +7,17 @@ import java.util.ArrayList;
  */
 public class Entry {
 	Mood mood;
-	LocalDateTime dateTime;
+	// LocalDateTime dateTime;
+	LocalDate date;
+	LocalTime time;
 	ArrayList<Activity> activities;
-	ArrayList<Source> sources;
 	
 	public Entry(Mood mood) {
 		this.mood = mood;
-		dateTime = LocalDateTime.now();
+		setDate(LocalDate.now());
+		setTime(LocalTime.now());
+		//dateTime = LocalDateTime.now();
 		activities = new ArrayList<>();
-		sources = new ArrayList<>();
 	}
 	
 	
@@ -27,14 +30,6 @@ public class Entry {
 		this.mood = mood;
 	}
 	
-	public LocalDateTime getDateTime() {
-		return dateTime;
-	}
-	
-	public void setDateTime(LocalDateTime dateTime) {
-		this.dateTime = dateTime;
-	}
-	
 	public ArrayList<Activity> getActivities() {
 		return activities;
 	}
@@ -43,11 +38,19 @@ public class Entry {
 		this.activities = activities;
 	}
 	
-	public ArrayList<Source> getSources() {
-		return sources;
+	public LocalDate getDate() {
+		return date;
 	}
 	
-	public void setSources(ArrayList<Source> sources) {
-		this.sources = sources;
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+	
+	public LocalTime getTime() {
+		return time;
+	}
+	
+	public void setTime(LocalTime time) {
+		this.time = time;
 	}
 }

@@ -1,82 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
-   <bottom>
-      <JFXButton maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="160.0" prefHeight="40.0" text="ADD ENTRY" textAlignment="CENTER" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </JFXButton>
-   </bottom>
-   <center>
-      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+<JFXTabPane focusTraversable="false" maxHeight="-Infinity" minHeight="100.0" minWidth="250.0" prefHeight="450.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EntriesController">
+   <tabs>
+      <Tab closable="false" text="Entries">
          <content>
-            <VBox fx:id="entriesContainer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="160.0" prefHeight="300.0" prefWidth="550.0">
+            <StackPane alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" minWidth="250.0" prefHeight="450.0" prefWidth="550.0">
                <children>
-                  <HBox maxHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="200.0">
-                     <children>
-                        <JFXButton prefHeight="90.0" prefWidth="90.0" text="MOOD ICON" />
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="150.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                  <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" minWidth="250.0" prefHeight="415.0" prefViewportHeight="415.0" prefViewportWidth="550.0" prefWidth="550.0" StackPane.alignment="TOP_LEFT">
+                     <content>
+                        <VBox fx:id="entriesContainer" focusTraversable="true">
                            <children>
-                              <Label text="22:59 - MONDAY, 1 APRIL" />
-                              <Label text="FEELING  GOOD" />
                            </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
                         </VBox>
-                        <Label alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="90.0" prefWidth="150.0" text="BECAUSE OF: A, B, C" HBox.hgrow="ALWAYS">
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                        </Label>
-                        <Label alignment="TOP_LEFT" layoutX="250.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="90.0" prefWidth="150.0" text="ACTIVITIES: X, Y, Z" HBox.hgrow="ALWAYS">
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                        </Label>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                  </HBox>
+                     </content>
+                  </ScrollPane>
+                  <JFXButton fx:id="addEntryButton" alignment="CENTER" cache="true" contentDisplay="CENTER" ellipsisString="-" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ClickAddEntryButton" prefHeight="65.0" prefWidth="65.0" ripplerFill="#e10707" text="ADD" textAlignment="CENTER" wrapText="true" StackPane.alignment="BOTTOM_RIGHT">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </StackPane.margin>
+                  </JFXButton>
                </children>
-            </VBox>
+            </StackPane>
          </content>
-      </ScrollPane>
-   </center>
-   <top>
-      <HBox fx:id="navHBox" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <JFXToggleButton maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" selected="true" text="Entries" textAlignment="CENTER">
-               <toggleGroup>
-                  <ToggleGroup fx:id="Navigation" />
-               </toggleGroup>
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-            </JFXToggleButton>
-            <JFXToggleButton layoutX="20.0" layoutY="20.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" text="Stats" textAlignment="CENTER" toggleGroup="$Navigation">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-            </JFXToggleButton>
-            <JFXToggleButton layoutX="134.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" text="Settings" textAlignment="CENTER" toggleGroup="$Navigation">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-            </JFXToggleButton>
-         </children></HBox>
-   </top>
-</BorderPane>
+      </Tab>
+      <Tab closable="false" disable="true" text="Stats">
+         <content>
+            <StackPane alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" minWidth="250.0" prefHeight="450.0" prefWidth="550.0" />
+         </content>
+      </Tab>
+      <Tab closable="false" disable="true" text="Settings">
+         <content>
+            <StackPane alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" minWidth="250.0" prefHeight="450.0" prefWidth="550.0" />
+         </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

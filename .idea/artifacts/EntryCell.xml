@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="EntryCell">
+    <output-path>$PROJECT_DIR$/out/artifacts/EntryCell</output-path>
+    <root id="archive" name="EntryCell.jar">
+      <element id="library" level="project" name="libs" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/EntryCell.fxml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/EntryCell.java" />
+    </root>
+  </artifact>
+</component>

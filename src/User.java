@@ -17,7 +17,6 @@ public class User {
 	ArrayList<Mood> moods;
 	LinkedList<Entry> entries;
 	LinkedList<Activity> activities;
-	LinkedList<Source> sources;
 	
 	public User(String name) {
 		setName(name);
@@ -27,7 +26,6 @@ public class User {
 		moods = new ArrayList<>();
 		entries = new LinkedList<>();
 		activities = new LinkedList<>();
-		sources = new LinkedList<>();
 		
 	}
 	
@@ -85,11 +83,4 @@ public class User {
 		this.activities = activities;
 	}
 	
-	public LinkedList<Source> getSources() {
-		return sources;
-	}
-	
-	public void setSources(LinkedList<Source> sources) {
-		this.sources = sources;
-	}
 }

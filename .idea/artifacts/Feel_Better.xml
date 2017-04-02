@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Feel Better">
+    <output-path>$PROJECT_DIR$/out/artifacts/Feel_Better</output-path>
+    <root id="archive" name="Feel Better.jar">
+      <element id="module-output" name="Feel Better" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jfoenix.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -15,7 +15,7 @@ public class MainController extends Stage {
 	public MainController() {
 		stackPane = new StackPane();
 		
-		loadEntriesFXMLLoader();
+		loadEntriesFXML();
 		start();
 		loadScene();
 	}
@@ -30,7 +30,7 @@ public class MainController extends Stage {
 		
 	}
 	
-	private void loadEntriesFXMLLoader() {
+	private void loadEntriesFXML() {
 		FXMLLoader entriesFXMLLoader = new FXMLLoader(getClass().getResource("EntriesView.fxml"));
 		
 		try {
