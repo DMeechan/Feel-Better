@@ -15,20 +15,81 @@ public class User {
 	LocalTime reminderTime;
 	
 	ArrayList<Mood> moods;
-	LinkedList<Entry> entryLog;
+	LinkedList<Entry> entries;
 	LinkedList<Activity> activities;
 	LinkedList<Source> sources;
 	
 	public User(String name) {
-		this.name = name;
-		reminderOn.setValue(false);
-		reminderTime = LocalTime.of(20,00);
+		setName(name);
+		setReminderOn(false);
+		setReminderTime(LocalTime.of(20,00));
 		
 		moods = new ArrayList<>();
-		entryLog = new LinkedList<>();
+		entries = new LinkedList<>();
 		activities = new LinkedList<>();
 		sources = new LinkedList<>();
 		
 	}
 	
+	///////////////
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public boolean isReminderOn() {
+		return reminderOn.get();
+	}
+	
+	public BooleanProperty reminderOnProperty() {
+		return reminderOn;
+	}
+	
+	public void setReminderOn(boolean reminderOn) {
+		this.reminderOn.set(reminderOn);
+	}
+	
+	public LocalTime getReminderTime() {
+		return reminderTime;
+	}
+	
+	public void setReminderTime(LocalTime reminderTime) {
+		this.reminderTime = reminderTime;
+	}
+	
+	public ArrayList<Mood> getMoods() {
+		return moods;
+	}
+	
+	public void setMoods(ArrayList<Mood> moods) {
+		this.moods = moods;
+	}
+	
+	public LinkedList<Entry> getEntries() {
+		return entries;
+	}
+	
+	public void setEntries(LinkedList<Entry> entries) {
+		this.entries = entries;
+	}
+	
+	public LinkedList<Activity> getActivities() {
+		return activities;
+	}
+	
+	public void setActivities(LinkedList<Activity> activities) {
+		this.activities = activities;
+	}
+	
+	public LinkedList<Source> getSources() {
+		return sources;
+	}
+	
+	public void setSources(LinkedList<Source> sources) {
+		this.sources = sources;
+	}
 }

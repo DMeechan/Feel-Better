@@ -16,10 +16,11 @@ public class MainController extends Stage {
 		stackPane = new StackPane();
 		
 		loadEntriesFXMLLoader();
-		run();
+		start();
+		loadScene();
 	}
 	
-	private void run() {
+	private void start() {
 		User user = new User("Daniel");
 		
 		loadUser(user);
@@ -43,7 +44,7 @@ public class MainController extends Stage {
 	}
 	
 	private void loadScene() {
-		this.setScene(scene);
+		this.setScene(new Scene(stackPane));
 		this.show();
 		
 		// ensure the window closes correctly
@@ -52,7 +53,7 @@ public class MainController extends Stage {
 			System.exit(0);
 		});
 		
-		this.setTitle("Snake!");
+		this.setTitle("Feel Better");
 		this.setResizable(false);
 		
 		// try to load application icon
@@ -61,8 +62,6 @@ public class MainController extends Stage {
 		// (however, setting the icon Dock icon on Mac requires making additional calls)
 		try {
 			this.getIcons().add(new Image(this.getClass().getResourceAsStream("icon.png")));
-			//Icon made by freepik.com and flaticon.com
-			// Flaticon is licensed by Creative Commons 3.0 BY
 			
 		} catch (Exception e) {
 			System.out.println("Error: application icon not found");
