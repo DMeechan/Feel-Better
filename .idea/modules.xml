@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Feel Better.iml" filepath="$PROJECT_DIR$/Feel Better.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/feel-better.iml" filepath="$PROJECT_DIR$/.idea/modules/feel-better.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/feel-better_main.iml" filepath="$PROJECT_DIR$/.idea/modules/feel-better_main.iml" group="feel-better" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/feel-better_test.iml" filepath="$PROJECT_DIR$/.idea/modules/feel-better_test.iml" group="feel-better" />
     </modules>
   </component>
 </project>
