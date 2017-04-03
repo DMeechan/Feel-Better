@@ -7,7 +7,7 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<JFXTabPane focusTraversable="false" maxHeight="-Infinity" minHeight="100.0" minWidth="250.0" prefHeight="450.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.dmeechan.EntriesController">
+<JFXTabPane focusTraversable="false" maxHeight="-Infinity" minHeight="100.0" minWidth="250.0" prefHeight="450.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EntriesController">
    <tabs>
       <Tab closable="false" text="Entries">
          <content>

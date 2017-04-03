@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
     compile group: 'com.jfoenix', name: 'jfoenix', version: '1.2.0'
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    //testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
 // Define the main class for the application
@@ -31,8 +31,10 @@ uploadArchives {
     }
 }
 
-task hello {
-    doLast {
-        println 'Hello world!'
+task copyJar {
+    copy {
+        from 'build/libs'
+        include '**/*.jar'
+        into "download"
     }
 }

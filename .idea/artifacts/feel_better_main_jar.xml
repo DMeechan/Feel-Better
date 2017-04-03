@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="feel-better_main:jar">
+    <output-path>$PROJECT_DIR$/download</output-path>
+    <root id="archive" name="feel-better_main.jar">
+      <element id="module-output" name="feel-better_main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jfoenix/jfoenix/1.2.0/7b1f2f9befc46c61a217250a92b391731c94a237/jfoenix-1.2.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

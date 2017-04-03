@@ -5,6 +5,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -63,7 +64,8 @@ public class MainController extends Stage {
 		// so the icon should work on different platforms
 		// (however, setting the icon Dock icon on Mac requires making additional calls)
 		try {
-			this.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+			//this.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+			this.getIcons().add(new Image(this.getClass().getResourceAsStream("icon.png")));
 			
 		} catch (Exception e) {
 			System.out.println("Error: application icon not found");
